@@ -1,11 +1,11 @@
 import turtle
+from dataext import *
 
 t = turtle.Turtle()
 
 class Graph:
 
     def axis(t):
-        t.hideturtle()
         t.color('black')
         t.speed(0)
         t.penup()
@@ -28,7 +28,6 @@ class Graph:
         t.left(90)
 
     def colourKey(t):
-        t.hideturtle()
         t.speed()
         t.penup()
         t.home()
@@ -38,87 +37,74 @@ class Graph:
         t.right(90)
         t.pendown()
 
+    def drawBar(t, value, gap, colour):
+        h = 625
+        b = value
+        m = 15
+        v = h * (b / m)
+        Movement.ghostforward(t, gap)
+        Movement.rectange(t, v, gap*2, colour)
+        Movement.ghostforward(t, gap)
+
+
 
 class Movement:
+    def ghostforward(t, distance):
+        t.up()
+        t.forward(distance)
+        t.down()
 
-    def barGraph(t, h):
-        t.hideturtle()
-        t.home()
-        t.backward(350)
-        t.right(90)
-        t.forward(350)
-        t.left(90)
-        t.pendown()
+    def rectange(t, height, width, colour):
+        t.color(colour)
+
         t.begin_fill()
-        t.forward(10)
         t.left(90)
-        t.forward(h)
+        t.forward(height)
         t.right(90)
-        t.forward(30)
+        t.forward(width)
         t.right(90)
-        t.forward(h)
+        t.forward(height)
+        t.left(90)
         t.end_fill()
-        t.left(90)
-        t.forward(10)
 
+    def Centre(t):
+        t.up()
+        t.goto(-350, -350)
+        t.down()
 
 class Data:
 
     def axisY(t):
-        t.hideturtle()
         t.left(90)
         t.speed(0)
         t.color('black')
         style = ('ariel', 12)
-        t.write('0', font = style, align = 'right')
-        t.forward(30)
-        t.write('2', font = style, align = 'right')
-        t.forward(30)
-        t.write('4', font = style, align = 'right')
-        t.forward(30)
-        t.write('6', font = style, align = 'right')
-        t.forward(30)
-        t.write('8', font = style, align = 'right')
-        t.forward(30)
-        t.write('10', font = style, align = 'right')
-        t.forward(30)
-        t.write('12', font = style, align = 'right')
-        t.forward(30)
-        t.write('14', font = style, align = 'right')
-        t.forward(30)
-        t.write('16', font = style, align = 'right')
-        t.forward(30)
-        t.write('18', font = style, align = 'right')
-        t.forward(30)
-        t.write('20', font = style, align = 'right')
-        t.forward(30)
-        t.write('22', font = style, align = 'right')
-        t.forward(30)
-        t.write('24', font = style, align = 'right')
-        t.forward(30)
-        t.write('26', font = style, align = 'right')
-        t.forward(30)
-        t.write('28', font = style, align = 'right')
-        t.forward(30)
-        t.write('30', font = style, align = 'right')
-        t.forward(30)
-        t.write('32', font = style, align = 'right')
-        t.forward(30)
-        t.write('34', font = style, align = 'right')
-        t.forward(30)
-        t.write('36', font = style, align = 'right')
-        t.forward(30)
-        t.write('38', font = style, align = 'right')
-        t.forward(30)
-        t.write('40', font = style, align = 'right')
+
+        for i in range(0, 15):
+            t.write(str(i), font = style, align = 'right')
+
+            h = 625
+            t.forward(h / 15)
+            t.down()
+            t.left(90)
+            t.forward(25)
+            t.backward(25)
+            t.right(90)
+            t.up()
         t.backward(620)
         t.right(90)
 
     def axisX(t):
-        t.hideturtle()
         t.speed(0)
         t.color('black')
         style = ('ariel', 10)
+
+        Movement.Centre(t)
+        t.up()
+        t.right(90)
+        t.forward(20)
+        t.left(90)
+
         t.forward(40)
         t.write('Brown Hair', font = style, align = 'center')
         t.forward(75)
@@ -137,10 +123,10 @@ class Data:
         t.write('Musician', font = style, align = 'center')
         t.forward(55)
         t.write('Artist', font = style, align = 'center')
+        t.down()
 
     def colourKey(t):
         t.speed(0)
-        t.hideturtle()
         t.color('green')
         style = ('ariel', 12)
         t.penup()
@@ -190,13 +176,20 @@ class Data:
 
 
 if __name__ == "__main__":
-    t.hideturtle()
+    test = DataTable()
+    test.insert_data("Jacob", Name = "Jacob", Age = 22, Hair = "Brown", County = "Essex", Sex = "Male")
+    test.insert_data("Joao", Name = "Joao", Age = 16, Hair = "Brown", County = "London", Sex = "Male")
+    test.insert_data("Maja", Name = "Maja", Age = 17, Hair = "Black", County = "London", Sex = "Female")
+
+    #t.hideturtle()
     turtle.bgcolor('grey')
     Graph.axis(t)
     Data.axisY(t)
     Data.axisX(t)
     Graph.colourKey(t)
     Data.colourKey(t)
-    Movement.barGraph(t, 20)
-    Graph.axis(t)
+    #Movement.barGraph_BlackHair(t, h)
+    Movement.Centre(t)
+    Graph.drawBar(t, test.count_data("Hair", "Brown"), 20, "Green")
+    Graph.drawBar(t, test.count_data("Hair", "Black"), 20, "Purple")
     turtle.done()
