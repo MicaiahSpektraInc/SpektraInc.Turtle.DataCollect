@@ -1,4 +1,4 @@
-import turtle, random
+import turtle
 
 t = turtle.Turtle()
 
@@ -6,6 +6,7 @@ class Graph:
 
     def axis(t):
         t.hideturtle()
+        t.color('black')
         t.speed(0)
         t.penup()
         t.backward(350)
@@ -42,6 +43,13 @@ class Movement:
 
     def barGraph(t, h):
         t.hideturtle()
+        t.home()
+        t.backward(350)
+        t.right(90)
+        t.forward(350)
+        t.left(90)
+        t.pendown()
+        t.begin_fill()
         t.forward(10)
         t.left(90)
         t.forward(h)
@@ -49,6 +57,7 @@ class Movement:
         t.forward(30)
         t.right(90)
         t.forward(h)
+        t.end_fill()
         t.left(90)
         t.forward(10)
 
@@ -188,7 +197,5 @@ if __name__ == "__main__":
     Data.axisX(t)
     Graph.colourKey(t)
     Data.colourKey(t)
-   # t.forward(50)
-    # Movement.home(t)
-    
-
+    Movement.barGraph(t, 20)
+    Graph.axis(t)
