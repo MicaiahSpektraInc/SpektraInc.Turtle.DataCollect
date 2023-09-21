@@ -199,3 +199,4 @@ if __name__ == "__main__":
     Data.colourKey(t)
     Movement.barGraph(t, 20)
     Graph.axis(t)
+    turtle.done()
