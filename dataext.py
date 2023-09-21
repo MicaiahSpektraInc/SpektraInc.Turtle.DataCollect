@@ -6,43 +6,49 @@ class Personal:
         self.name = name
         self.age = age
 
-p1 = Personal(list[name1,  age1,
-              name2,  age2,
-              name3,  age3,
-              name4,  age4,
-              name5,  age5,
-              name6,  age6,
-              name7,  age7,
-              name8,  age8,
-              name9,  age9,
-              name10,  age10,
-              name11,  age11,
-              name12,  age12,
-              name13,  age13,
-              name14,  age14])
+p1 = Personal[name1],  age[1],
+              name[2],  age[2],
+              name[3],  age[3],
+              name[4],  age[4],
+              name[5],  age[5],
+              name[6],  age[6],
+              name[7],  age[7],
+              name[8],  age[8],
+              name[9],  age[9],
+              name[10],  age[10],
+              name[11],  age[11],
+              name[12],  age[12],
+              name[13],  age[13],
+              name[14],  age[14]
 
-class Appearnce:
+class Appearance:
     def __init__(self, hair_colour, sex,role):
         self.hair_colour = hair_colour
         self.sex = sex
 
-a1 = Appearance(list[hair_colour1, sex1,
-                hair_colour2,  sex2,
-                hair_colour3,  sex3,
-                hair_colour4,  sex4,
-                hair_colour5,  sex5,
-                hair_colour6,  sex6,
-                hair_colour7,  sex7,
-                hair_colour8,  sex8,
-                hair_colour9,  sex9,
-                hair_colour10,  sex10,
-                hair_colour11,  sex11,
-                hair_colour12,  sex12,
-                hair_colour13,  sex13,
-                hair_colour14,  sex14,])
+a1 = Appearance[hair_colour1, sex1,
+                hair_colour[2],  sex[2],
+                hair_colour[3],  sex[3],
+                hair_colour[4],  sex[4],
+                hair_colour[5],  sex[5],
+                hair_colour[6],  sex[6],
+                hair_colour[7],  sex[7],
+                hair_colour[8],  sex[8],
+                hair_colour[9],  sex[9],
+                hair_colour[10],  sex[10],
+                hair_colour[11],  sex[11],
+                hair_colour[12],  sex[12],
+                hair_colour[13],  sex[13],
+                hair_colour[14],  sex[14],]
 
 class Job:
     def __init__(self, role):
         self.role = role
 
-j1 = Job(role1, role2,  role3,  role4,  role5,  role6,  role7,  role8,  role9,  role10,  role11,  role12,  role13,  role14)
+j1 = Job[role[1], role[2],
+        role[3],  role[4],
+        role[5],  role[6],
+        role[7],  role[8],
+        role[9],  role[10],
+        role[11],  role[12],
+        role[13],  role[14]]
