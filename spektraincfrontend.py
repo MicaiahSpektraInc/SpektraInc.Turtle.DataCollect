@@ -19,7 +19,9 @@ for i in range(0, 5):
     sexList.append(sexe)
     hair_colourList.append(hair_colour)
 
-print(nameList)
+
+
+
 
 
 
