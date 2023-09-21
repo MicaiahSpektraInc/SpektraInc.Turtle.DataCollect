@@ -43,7 +43,13 @@ class DataTable:
              if i.role == role:
                  c += 1
          return c
+     
 
-test = DataTable()
-test.AddPerson("Lucas", 16, "Male", "Student", "Brown")
-print(test.CountSex("Male"))
+if __name__ == "__main__":
+    test = DataTable()
+    test.AddPerson("Lucas", 16, "Male", "Musician", "Brown")
+    test.AddPerson("Maja", 17, "Female", "Programmer", "Brown")
+    test.AddPerson("Micaiah", 18, "Male", "Artist", "Black")
+    test.AddPerson("Fillip", 16, "Male", "Musician", "Blonde")
+    test.AddPerson("Joao", 16, "Male", "Programmer", "Ginger")
+    print(test.CountRole("Musician"))
