@@ -40,9 +40,6 @@ a1 = Appearance(list[hair_colour1, sex1,
                 hair_colour12,  sex12,
                 hair_colour13,  sex13,
                 hair_colour14,  sex14,])
-count  = 
-
-
 
 class Job:
     def __init__(self, role):
