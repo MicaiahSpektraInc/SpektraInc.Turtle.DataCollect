@@ -1,1 +1,1 @@
-Hello, World, I exist :D
+Hello world, I exist
