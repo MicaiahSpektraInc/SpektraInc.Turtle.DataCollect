@@ -11,12 +11,12 @@ for i in range(0, 5):
     name = input("Please enter your name - ")
     age = input("Please enter your age - ")
     role = input("Please enter your profession - ")
-    sexe = input("Please enter your sex - ")
+    sex = input("Please enter your sex - ")
     hair_colour = input("Please enter your hair colour(eg. Black, Brown) - ")
     nameList.append(name)
     ageList.append(age)
     roleList.append(role)
-    sexList.append(sexe)
+    sexList.append(sex)
     hair_colourList.append(hair_colour)
 
 
