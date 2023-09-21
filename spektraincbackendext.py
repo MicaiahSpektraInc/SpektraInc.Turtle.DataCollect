@@ -1,0 +1,143 @@
+import turtle, random
+
+t = turtle.Turtle()
+
+class Graph:
+
+    def axis(t):
+        t.hideturtle()
+        t.speed(0)
+        t.penup()
+        t.backward(350)
+        t.right(90)
+        t.forward(350)
+        t.pendown()
+        t.left(90)
+        t.forward(635)
+        t.backward(635)
+        t.left(90)
+        t.forward(625)
+        t.backward(625)
+        t.right(90)
+        t.penup()
+        t.home()
+        t.backward(350)
+        t.right(90)
+        t.forward(350)
+        t.left(90)
+
+    def colourKey(t):
+        t.showturtle()
+        t.speed(2)
+        t.penup()
+        t.home()
+        t.forward(300)
+        t.left(90)
+        t.forward(250)
+        t.right(90)
+        t.pendown()
+
+
+class Movement:
+
+    def barGraph(t, h):
+        t.hideturtle()
+        t.forward(10)
+        t.left(90)
+        t.forward(h)
+        t.right(90)
+        t.forward(30)
+        t.right(90)
+        t.forward(h)
+        t.left(90)
+        t.forward(10)
+
+
+class Data:
+
+    def axisY(t):
+        t.hideturtle()
+        t.left(90)
+        t.speed(0)
+        t.color('black')
+        style = ('ariel', 12)
+        t.write('0', font = style, align = 'right')
+        t.forward(30)
+        t.write('2', font = style, align = 'right')
+        t.forward(30)
+        t.write('4', font = style, align = 'right')
+        t.forward(30)
+        t.write('6', font = style, align = 'right')
+        t.forward(30)
+        t.write('8', font = style, align = 'right')
+        t.forward(30)
+        t.write('10', font = style, align = 'right')
+        t.forward(30)
+        t.write('12', font = style, align = 'right')
+        t.forward(30)
+        t.write('14', font = style, align = 'right')
+        t.forward(30)
+        t.write('16', font = style, align = 'right')
+        t.forward(30)
+        t.write('18', font = style, align = 'right')
+        t.forward(30)
+        t.write('20', font = style, align = 'right')
+        t.forward(30)
+        t.write('22', font = style, align = 'right')
+        t.forward(30)
+        t.write('24', font = style, align = 'right')
+        t.forward(30)
+        t.write('26', font = style, align = 'right')
+        t.forward(30)
+        t.write('28', font = style, align = 'right')
+        t.forward(30)
+        t.write('30', font = style, align = 'right')
+        t.forward(30)
+        t.write('32', font = style, align = 'right')
+        t.forward(30)
+        t.write('34', font = style, align = 'right')
+        t.forward(30)
+        t.write('36', font = style, align = 'right')
+        t.forward(30)
+        t.write('38', font = style, align = 'right')
+        t.forward(30)
+        t.write('40', font = style, align = 'right')
+        t.backward(620)
+        t.right(90)
+
+    def axisX(t):
+        t.hideturtle()
+        t.speed(0)
+        t.color('black')
+        style = ('ariel', 10)
+        t.forward(40)
+        t.write('Brown Hair', font = style, align = 'center')
+        t.forward(75)
+        t.write('Black Hair', font = style, align = 'center')
+        t.forward(75)
+        t.write('Blonde Hair', font = style, align = 'center')
+        t.forward(110)
+        t.write('Ginger Hair', font = style, align = 'right')
+        t.forward(50)
+        t.write('Male', font = style, align = 'center')
+        t.forward(50)
+        t.write('Female', font = style, align = 'center')
+        t.forward(90)
+        t.write('Programmer', font = style, align = 'center')
+        t.forward(75)
+        t.write('Musician', font = style, align = 'center')
+        t.forward(55)
+        t.write('Artist', font = style, align = 'center')
+
+
+
+
+if __name__ == "__main__":
+    Graph.axis(t)
+    Data.axisY(t)
+    Data.axisX(t)
+    Graph.colourKey(t)
+   # t.forward(50)
+    # Movement.home(t)
+    
+
