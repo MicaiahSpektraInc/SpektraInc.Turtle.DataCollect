@@ -5,7 +5,6 @@
 - [About](#about)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -31,13 +30,9 @@ This project is designed to receive data and visualize it as a bar graph. It ser
 
 - [No prerequisites]
 
-## Usage
-
-Explain how to use your project. Provide examples and code snippets if necessary. Include any important details about how to interact with your project.
-
 ## Contributing
 
-Explain how others can contribute to your project. Include information about how to submit issues, propose changes, or make pull requests.
+- [Feedback] Add feedback to the SpektraInc program here - (https://forms.gle/xi58feUErnYJeJ9v7) 
 
 ## License
 
