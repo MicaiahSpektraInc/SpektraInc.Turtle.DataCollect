@@ -1,11 +1,10 @@
+import turtle, spektraincbackendext, dataext
+
 def test():
     print("Yeah, this works!")
 
-nameList = []
-ageList = []
-roleList = []
-sexList = []
-hair_colourList = []
+t = turtle.Turtle()
+d = dataext.DataTable()
 
 for i in range(0, 5):
     name = input("Please enter your name - ")
@@ -13,12 +12,8 @@ for i in range(0, 5):
     role = input("Please enter your profession - ")
     sex = input("Please enter your sex - ")
     hair_colour = input("Please enter your hair colour(eg. Black, Brown) - ")
-    nameList.append(name)
-    ageList.append(age)
-    roleList.append(role)
-    sexList.append(sex)
-    hair_colourList.append(hair_colour)
 
+    d.insert_data(name, Name=name, Age=age, Role=role, Sex=sex, HairColour=hair_colour)
 
 
 
