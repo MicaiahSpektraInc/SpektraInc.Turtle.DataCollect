@@ -4,11 +4,10 @@
 
 - [About](#about)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+- [Prerequisites](#prerequisites)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license
+- [License](#license)
 
 # About 
 The project receives data and then outputs it as a bar graph.
@@ -26,15 +25,11 @@ This project is designed to receive data and visualize it as a bar graph. It ser
 
 ## Getting Started
 
-Provide instructions on how to get started with your project. This section should include information on how to install, configure, and run your project.
+- [Firstly input the data from the data table.]
 
 ### Prerequisites
 
-List any prerequisites or dependencies that users need to have installed before they can use your project.
-
-### Installation
-
-Provide step-by-step installation instructions. Include code snippets or commands that users can run to set up your project.
+- [No prerequisites]
 
 ## Usage
 
@@ -46,6 +41,6 @@ Explain how others can contribute to your project. Include information about how
 
 ## License
 
-This project is licensed under the [APACHE LICENSE, VERSION 2.0] - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the [APACHE LICENSE, VERSION 2.0] - see the [LICENSE.md](LICENSE) file for details.
 - [Ls.mc](https://www.apache.org/licenses/LICENSE-2.0)
     
