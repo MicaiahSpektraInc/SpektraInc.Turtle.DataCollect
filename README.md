@@ -10,9 +10,9 @@
 - [License](#license)
 
 # About 
-The project receives data and then outputs it as a bar graph.
+- The project receives data and then outputs it as a bar graph.
 
-This project is designed to receive data and visualize it as a bar graph. It serves as a powerful tool for data visualization and analysis, helping users gain insights from their data through interactive and visually appealing graphs.
+- This project is designed to receive data and visualize it as a bar graph. It serves as a powerful tool for data visualization and analysis, helping users gain insights from their data through interactive and visually appealing graphs.
 
 # Features
 - [Spektraincfrontend.py] The User inputs the data in the front end which organizes the data in their dedicated variables. 
