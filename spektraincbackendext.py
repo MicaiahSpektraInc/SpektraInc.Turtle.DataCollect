@@ -43,9 +43,9 @@ class Graph:
         m = 15
         v = h * (b / m)
         Movement.ghostforward(t, gap)
-        t.up()
-        t.forward(gap/2)
-        t.down()
+        #t.up()
+        #t.forward(gap/2)
+        #t.down()
         Movement.rectangle(t, v, gap, colour)
         Movement.ghostforward(t, gap)
 
@@ -96,7 +96,7 @@ class Data:
         t.backward(620)
         t.right(90)
 
-    def axisX(t):
+    def axisX(t, width):
         t.speed(0)
         t.color('black')
         style = ('ariel', 10)
@@ -107,23 +107,25 @@ class Data:
         t.forward(20)
         t.left(90)
 
-        t.forward(40)
-        t.write('Brown Hair', font = style, align = 'center')
-        t.forward(75)
-        t.write('Black Hair', font = style, align = 'center')
-        t.forward(75)
-        t.write('Blonde Hair', font = style, align = 'center')
-        t.forward(75)
-        t.write('Ginger Hair', font = style, align = 'center')
-        t.forward(75)
+        total = width * 3
+
+        t.forward(total/2)
+        t.write('Brown', font = style, align = 'center')
+        t.forward(total)
+        t.write('Black', font = style, align = 'center')
+        t.forward(total)
+        t.write('Blonde', font = style, align = 'center')
+        t.forward(total)
+        t.write('Ginger', font = style, align = 'center')
+        t.forward(total)
         t.write('Male', font = style, align = 'center')
-        t.forward(50)
+        t.forward(total)
         t.write('Female', font = style, align = 'center')
-        t.forward(90)
+        t.forward(total)
         t.write('Programmer', font = style, align = 'center')
-        t.forward(75)
+        t.forward(total)
         t.write('Musician', font = style, align = 'center')
-        t.forward(55)
+        t.forward(total)
         t.write('Artist', font = style, align = 'center')
         t.down()
 
@@ -175,23 +177,25 @@ class Data:
         t.write('Green = Artist', font = style, align = 'right')
 
 def main(t, d):
-    #t.hideturtle()
+    t.hideturtle()
+    w = 23.5
     turtle.bgcolor('grey')
     Graph.axis(t)
     Data.axisY(t)
-    Data.axisX(t)
+    Data.axisX(t, w)
     Graph.colourKey(t)
     Data.colourKey(t)
+
     Movement.Centre(t)
-    Graph.drawBar(t, d.count_data("Hair", "Brown"), 20, "Green")
-    Graph.drawBar(t, d.count_data("Hair", "Black"), 20, "Purple")
-    Graph.drawBar(t, d.count_data("Hair", "Blonde"), 20, "Darkgoldenrod1")
-    Graph.drawBar(t, d.count_data("Hair", "Ginger"), 20, "Slateblue")
-    Graph.drawBar(t, d.count_data("Sex", "Male"), 20, "Green")
-    Graph.drawBar(t, d.count_data("Sex", "Female"), 20, "Purple")
-    Graph.drawBar(t, d.count_data("Role", "Programmer"), 20, "Darkgoldenrod1")
-    Graph.drawBar(t, d.count_data("Role", "Musician"), 20, "Slateblue")
-    Graph.drawBar(t, d.count_data("Role", "Artist"), 20, "Green")
+    Graph.drawBar(t, d.count_data("Hair", "Brown"), w, "Green")
+    Graph.drawBar(t, d.count_data("Hair", "Black"), w, "Purple")
+    Graph.drawBar(t, d.count_data("Hair", "Blonde"), w, "Darkgoldenrod1")
+    Graph.drawBar(t, d.count_data("Hair", "Ginger"), w, "Slateblue")
+    Graph.drawBar(t, d.count_data("Sex", "Male"), w, "Green")
+    Graph.drawBar(t, d.count_data("Sex", "Female"), w, "Purple")
+    Graph.drawBar(t, d.count_data("Role", "Programmer"), w, "Darkgoldenrod1")
+    Graph.drawBar(t, d.count_data("Role", "Musician"), w, "Slateblue")
+    Graph.drawBar(t, d.count_data("Role", "Artist"), w, "Green")
     turtle.done()
 
 
