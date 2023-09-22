@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     test.insert_data("Oliver", Name = "Oliver", Age = 16, Role = "Programmer", Sex = "Sex", HairColour = "Brown")
 
-    test.insert_data("Nathan", Name = "Nathan", Age = 16, Role = "Musician", Sex = "Male", HairColour = "Black")
+    test.insert_data("Nathan", Name = "Nathan ", Age = 16, Role = "Musician", Sex = "Male", HairColour = "Black")
 
     test.insert_data("Loic", Name = "Loic", Age = 16, Role = "Programmer", Sex = "Male", HairColour = "Black")
 
