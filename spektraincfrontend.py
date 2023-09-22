@@ -1,4 +1,5 @@
-import turtle, spektraincbackendext, dataext
+import turtle, dataext
+import spektraincbackendext as turtleext
 
 def test():
     print("Yeah, this works!")
@@ -14,6 +15,8 @@ for i in range(0, 5):
     hair_colour = input("Please enter your hair colour(eg. Black, Brown) - ")
 
     d.insert_data(name, Name=name, Age=age, Role=role, Sex=sex, HairColour=hair_colour)
+
+turtleext.main(t, d)
 
 
 
