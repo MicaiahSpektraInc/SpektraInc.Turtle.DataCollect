@@ -43,9 +43,11 @@ class Graph:
         m = 15
         v = h * (b / m)
         Movement.ghostforward(t, gap)
-        Movement.rectange(t, v, gap*2, colour)
+        t.up()
+        t.forward(gap/2)
+        t.down()
+        Movement.rectangle(t, v, gap, colour)
         Movement.ghostforward(t, gap)
-
 
 
 class Movement:
@@ -54,7 +56,7 @@ class Movement:
         t.forward(distance)
         t.down()
 
-    def rectange(t, height, width, colour):
+    def rectangle(t, height, width, colour):
         t.color(colour)
 
         t.begin_fill()
@@ -111,9 +113,9 @@ class Data:
         t.write('Black Hair', font = style, align = 'center')
         t.forward(75)
         t.write('Blonde Hair', font = style, align = 'center')
-        t.forward(110)
-        t.write('Ginger Hair', font = style, align = 'right')
-        t.forward(50)
+        t.forward(75)
+        t.write('Ginger Hair', font = style, align = 'center')
+        t.forward(75)
         t.write('Male', font = style, align = 'center')
         t.forward(50)
         t.write('Female', font = style, align = 'center')
@@ -144,7 +146,7 @@ class Data:
         t.right(90)
         t.forward(20)
         t.left(90)
-        t.color('slate blue')
+        t.color('slateblue')
         t.write('Slate Blue = Ginger Hair', font = style, align = 'right')
         t.right(90)
         t.forward(40)
@@ -164,7 +166,7 @@ class Data:
         t.right(90)
         t.forward(20)
         t.left(90)
-        t.color('slate blue')
+        t.color('slateblue')
         t.write('Slate Blue = Musician', font = style, align = 'right')
         t.right(90)
         t.forward(20)
@@ -177,9 +179,12 @@ class Data:
 
 if __name__ == "__main__":
     test = DataTable()
-    test.insert_data("Jacob", Name = "Jacob", Age = 22, Hair = "Brown", County = "Essex", Sex = "Male")
-    test.insert_data("Joao", Name = "Joao", Age = 16, Hair = "Brown", County = "London", Sex = "Male")
-    test.insert_data("Maja", Name = "Maja", Age = 17, Hair = "Black", County = "London", Sex = "Female")
+    test.insert_data("Jacob", Name = "Jacob", Age = 22, Hair = "Brown", Role = "Programmer", Sex = "Male")
+    test.insert_data("Joao", Name = "Joao", Age = 16, Hair = "Brown", Role = "Artist", Sex = "Male")
+    test.insert_data("Maja", Name = "Maja", Age = 17, Hair = "Black", Role = "Artist", Sex = "Female")
+    test.insert_data("Filip", Name = "Filip", Age = 17, Hair = "Blonde", Role = "Musician", Sex = "Male")
+    test.insert_data("Lucas", Name = "Lucas", Age = 17, Hair = "Blonde", Role = "Musician", Sex = "Male")
+    test.insert_data("Macaiah", Name = "Macaiah", Age = 17, Hair = "Ginger", Role = "Musician", Sex = "Male")
 
     #t.hideturtle()
     turtle.bgcolor('grey')
@@ -192,4 +197,11 @@ if __name__ == "__main__":
     Movement.Centre(t)
     Graph.drawBar(t, test.count_data("Hair", "Brown"), 20, "Green")
     Graph.drawBar(t, test.count_data("Hair", "Black"), 20, "Purple")
+    Graph.drawBar(t, test.count_data("Hair", "Blonde"), 20, "Darkgoldenrod1")
+    Graph.drawBar(t, test.count_data("Hair", "Ginger"), 20, "Slateblue")
+    Graph.drawBar(t, test.count_data("Sex", "Male"), 20, "Green")
+    Graph.drawBar(t, test.count_data("Sex", "Female"), 20, "Purple")
+    Graph.drawBar(t, test.count_data("Role", "Programmer"), 20, "Darkgoldenrod1")
+    Graph.drawBar(t, test.count_data("Role", "Musician"), 20, "Slateblue")
+    Graph.drawBar(t, test.count_data("Role", "Artist"), 20, "Green")
     turtle.done()
