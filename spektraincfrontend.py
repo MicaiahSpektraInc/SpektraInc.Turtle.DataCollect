@@ -1,4 +1,5 @@
-import turtle, spektraincbackendext, dataext
+import turtle, dataext
+import spektraincbackendext as turtleext
 
 def test():
     print("Yeah, this works!")
@@ -6,14 +7,18 @@ def test():
 t = turtle.Turtle()
 d = dataext.DataTable()
 
-for i in range(0, 5):
+
+
+for i in range(0, int(input("How many people do you want to enter?"))):
     name = input("Please enter your name - ")
     age = input("Please enter your age - ")
     role = input("Please enter your profession - ")
     sex = input("Please enter your sex - ")
     hair_colour = input("Please enter your hair colour(eg. Black, Brown) - ")
 
-    d.insert_data(name, Name=name, Age=age, Role=role, Sex=sex, HairColour=hair_colour)
+    d.insert_data(name, Name=name, Age=age, Role=role, Sex=sex, Hair=hair_colour)
+
+turtleext.main(t, d)
 
 
 
